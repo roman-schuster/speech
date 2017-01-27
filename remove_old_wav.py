@@ -1,4 +1,4 @@
 from papirus import PapirusText
 
-text = PapirusText()
-text.write("removing old wav")
+display = PapirusText()
+display.write("removing old wav")
