@@ -35,6 +35,8 @@ def main(speech_file):
     Args:
         speech_file: the name of the audio file.
     '''
+    display = PapirusText()
+    
     with open(speech_file, 'rb') as speech:
         speech_content = base64.b64encode(speech.read())
 
@@ -57,8 +59,11 @@ def main(speech_file):
     # Unwrapping the json
     result_string = '' # The final string containing the text we translated
     json_results = json.dumps(response)
-    results = json.loads(json_results)['results']
-    for result in results:
+    
+    try:
+        results = json.loads(json_results)['results']
+        
+        for result in results:
         alternatives = result['alternatives']
     
         for alternative in alternatives:
@@ -66,9 +71,12 @@ def main(speech_file):
         
             for i in range(len(transcript)):
                 result_string += transcript[i]
-                
-    text = PapirusText()
-    text.write(result_string)
+              
+        display.write(result_string)
+        
+    except KeyError: 'results':
+        display.write('you didn\'t say anything')
+
                 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
