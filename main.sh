@@ -4,7 +4,7 @@
 ###   Google Environment Variables   ###
 ########################################
 
-export GOOGLE_APPLICATION_CREDENTIALS="/home/pi/SmartScale/service_acct.json"
+export GOOGLE_APPLICATION_CREDENTIALS="/home/pi/speech/service_acct.json"
 export GCLOUD_PROJECT="smartscale-rs"
 
 
