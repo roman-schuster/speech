@@ -1,4 +1,4 @@
 from papirus import PapirusText
 
-text = PapirusText()
-text.write('recoding saved')
+display = PapirusText()
+display.write('recoding saved')
