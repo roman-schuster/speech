@@ -4,6 +4,9 @@ import base64                                       # for encoding the wav file 
 import json                                         # for unwrapping the Google Speech API response
 import httplib2                                     # for sending the Google Speech API request
 
+from googleapiclient import discovery               # for accessing Google Speech Service
+from oauth2client.client import GoogleCredentials   # for authorizing Google Speech Service
+
 def get_speech_service():
     '''
     Uses application default credentials to authorize google api requests
