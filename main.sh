@@ -1,12 +1,12 @@
 #!/bin/bash
 
-###   Google Environment Variables   ###
+##    Google Environment Variables    ##
 ########################################
 
 export GOOGLE_APPLICATION_CREDENTIALS="/home/pi/speech/service_acct.json"
 export GCLOUD_PROJECT="smartscale-rs"
 
-###   Recording Audio   ###
+##    Recording Audio    ##
 ###########################
 
 # Checking if speech.wav already exists
@@ -39,7 +39,7 @@ else
 	sudo python msg.py 'recording not saved'
 fi
 
-########   Speech API    ########
+###  Calling the Speech API   ###
 #################################
 
 python speech.py speech.wav
