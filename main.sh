@@ -39,7 +39,7 @@ else
 	sudo python msg.py 'recording not saved'
 fi
 
-###  Calling the Speech API   ###
+##   Calling the Speech API    ##
 #################################
 
 python speech.py speech.wav
