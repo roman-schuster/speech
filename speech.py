@@ -7,6 +7,10 @@ import httplib2                                     # for sending the Google Spe
 from googleapiclient import discovery               # for accessing Google Speech Service
 from oauth2client.client import GoogleCredentials   # for authorizing Google Speech Service
 
+# Setting up Google Cloud Speech API
+DISCOVERY_URL = ('https://{api}.googleapis.com/$discovery/rest?'
+                 'version={apiVersion}')
+
 def get_speech_service():
     '''
     Uses application default credentials to authorize google api requests
