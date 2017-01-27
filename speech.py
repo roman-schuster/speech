@@ -64,14 +64,14 @@ def main(speech_file):
         results = json.loads(json_results)['results']
         
         for result in results:
-        alternatives = result['alternatives']
+            alternatives = result['alternatives']
     
         for alternative in alternatives:
             transcript = alternative['transcript']
         
             for i in range(len(transcript)):
                 result_string += transcript[i]
-              
+                
         display.write(result_string)
         
     except KeyError: 'results':
