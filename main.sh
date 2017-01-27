@@ -28,7 +28,8 @@ fi
 	# File Size	:	650kb
 	# Bit Rate	:	512k
 	# VU-meter	:	mono (1 channel)
-
+	
+sudo python recording.py
 arecord -f cd -r 16000 -d 10 -t wav -c 1 -D plughw:1,0 speech.wav
 
 # Making sure the reording saved properly
