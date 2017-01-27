@@ -74,7 +74,7 @@ def main(speech_file):
                 
         display.write(result_string)
         
-    except KeyError: 'results':
+    except KeyError as err:
         display.write('you didn\'t say anything')
 
                 
